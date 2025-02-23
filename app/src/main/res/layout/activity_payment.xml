@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 包含返回按钮和保存按钮的容器 -->
+    <LinearLayout
+        android:id="@+id/top_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical">
+
+        <!-- 返回按钮 -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back"
+            android:background="@android:color/transparent" />
+
+        <!-- 空的 View 作为占位符，用于推送保存按钮到右边 -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- 保存图片按钮 -->
+        <TextView
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Save"
+            android:textColor="@color/blue_700"
+            android:gravity="center_vertical" /> <!-- 使文本垂直居中 -->
+    </LinearLayout>
+
+    <!-- 说明文字 -->
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="You can support the developer by scanning the QR codes below using Alipay or WeChat.\n\nYour donation will help fund the development and maintenance of this app. Thank you for your support!"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="16dp" />
+
+
+    <!-- 支付宝收款图片 -->
+    <ImageView
+        android:id="@+id/alipay_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/instruction_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/alipay" />
+
+    <!-- 微信收款图片 -->
+    <ImageView
+        android:id="@+id/wechat_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/alipay_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/wechat" />
+
+</RelativeLayout>

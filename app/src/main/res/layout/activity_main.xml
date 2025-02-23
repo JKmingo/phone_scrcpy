@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="0dp">
+
+        <!-- Scrollable Content (Middle Part) -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button_start_layout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Button inside ScrollView, placed before EditText -->
+                <Button
+                    android:id="@+id/button_select_usb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/selector_button"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:padding="12dp"
+                    android:text="@string/select_usb_device"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="@string/label_server_ip"
+                    android:textAppearance="@android:style/TextAppearance" />
+
+                <com.phone.scrcpy.custom.MyEditText
+                    android:id="@+id/editText_server_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+                <com.phone.scrcpy.custom.MySpinner
+                    android:id="@+id/spinner_video_resolution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_spinner"
+                    android:entries="@array/options_resolution_values"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/label_video_resolution" />
+
+                <com.phone.scrcpy.custom.MySpinner
+                    android:id="@+id/spinner_video_bitrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_spinner"
+                    android:entries="@array/options_bitrate_values"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/label_video_bitrate" />
+
+                <com.phone.scrcpy.custom.MySpinner
+                    android:id="@+id/spinner_fps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_spinner"
+                    android:entries="@array/options_fps_values"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/label_fps" />
+
+                <com.phone.scrcpy.custom.MySwitch
+                    android:id="@+id/switch_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_spinner"
+                    android:checked="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/switch_audio"
+                    android:textSize="20sp" />
+
+                <com.phone.scrcpy.custom.MySwitch
+                    android:id="@+id/switch_h265"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_spinner"
+                    android:checked="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/switch_h265"
+                    android:textSize="20sp" />
+
+                <com.phone.scrcpy.custom.MySwitch
+                    android:id="@+id/switch_screen_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_spinner"
+                    android:checked="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/switch_screen_off"
+                    android:textSize="20sp" />
+
+                <com.phone.scrcpy.custom.MySwitch
+                    android:id="@+id/switch_show_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_spinner"
+                    android:checked="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/switch_open_menu"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Start Button (Fixed to bottom) -->
+        <LinearLayout
+            android:id="@+id/button_start_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <!-- 第一个按钮 -->
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:padding="12dp"
+                android:text="@string/action_start"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/button_open_tcpip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:padding="12dp"
+                android:text="@string/action_open_tcpip"
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

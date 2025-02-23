@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">PhoneScrcpy</string>
+
+    <string name="label_server_ip">Server IP or USB Device</string>
+
+    <string name="label_video_resolution">Max Size</string>
+    <string name="label_video_bitrate">Bitrate</string>
+    <string name="action_start">Start</string>
+    <string name="action_open_tcpip">Open Wireless</string>
+    <string name="appswitch_button">=</string>
+    <string name="home_button">o</string>
+    <string name="back_button">v</string>
+    <string name="loading">Loading...</string>
+
+    <string name="switch1">Nav Bar  (check this if target device does not have on-screen nav bar)</string>
+    <string name="select_usb_device">Select USB Device</string>
+
+    <string-array name="options_resolution_keys">
+        <item>2560</item>
+        <item>1920</item>
+        <item>1600</item>
+        <item>1280</item>
+        <item>1024</item>
+        <item>800</item>
+    </string-array>
+
+    <integer-array name="options_resolution_values">
+        <item>2560</item>
+        <item>1920</item>
+        <item>1600</item>
+        <item>1280</item>
+        <item>1024</item>
+        <item>800</item>
+    </integer-array>
+
+    <!-- New Strings -->
+    <string name="switch_audio">Audio (Android 11+)</string>
+    <string name="switch_h265">H265</string>
+    <string name="switch_screen_off">ScreenOff</string>
+    <string name="label_fps">FPS</string>
+    <string name="switch_open_menu">Menu (Recommended to enable on phone)</string>
+
+    <!-- Options for FPS Spinner -->
+    <string-array name="options_fps_keys">
+        <item>120</item>
+        <item>90</item>
+        <item>60</item>
+        <item>30</item>
+    </string-array>
+
+    <integer-array name="options_fps_values">
+        <item>120</item>
+        <item>90</item>
+        <item>60</item>
+        <item>30</item>
+    </integer-array>
+
+    <string-array name="options_bitrate_keys">
+        <item>50 M</item>
+        <item>12 M</item>
+        <item>8 M</item>
+        <item>6 M</item>
+        <item>4 M</item>
+        <item>2 M</item>
+        <item>1 M</item>
+    </string-array>
+
+    <integer-array name="options_bitrate_values">
+        <item>50</item>
+        <item>12</item>
+        <item>8</item>
+        <item>6</item>
+        <item>4</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
+</resources>
+
+

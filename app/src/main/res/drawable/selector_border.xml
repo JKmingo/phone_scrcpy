@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rounded_button_pressed" android:state_pressed="true" android:textColor="@color/white" /> <!-- 按下时 -->
+    <item android:drawable="@drawable/rounded_button_focused" android:state_focused="true" android:textColor="@color/white" /> <!-- 聚焦时 -->
+<!--    <item android:drawable="@drawable/rounded_button_default" /> &lt;!&ndash; 默认状态 &ndash;&gt;-->
+</selector>

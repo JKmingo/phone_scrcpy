@@ -1,0 +1,32 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+!build.gradle
+!gradle-wrapper.jar
+
+# Android Studio files
+.idea/
+*.iml
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Kotlin files
+*.kotlin_module
+
+# NDK
+obj/
+
+# Local configuration files
+local.properties
+
+# Log files
+*.log
+
+# Backup files
+*~.nib
+*.swp
+*.swo

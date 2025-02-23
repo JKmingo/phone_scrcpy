@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="deep_grey">#333333</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#AAAAAA</color>
+    <color name="dark_grey">#FF888888</color>
+    <color name="colorPrimary">#3F51B5</color>  <!-- 深蓝色 -->
+    <!-- Primary Dark color (通常用于状态栏背景的颜色) -->
+    <color name="colorPrimaryDark">#303F9F</color>  <!-- 更深的蓝色，用于状态栏 -->
+    <!-- Accent color (用于强调按钮、选择框、链接等次要交互元素的颜色) -->
+    <color name="colorAccent">#FF4081</color>  <!-- 粉红色 -->
+
+    <color name="blue_700">#1976D2</color> <!-- 深蓝色（按下时） -->
+    <color name="blue_600">#1E88E5</color> <!-- 更亮的蓝色（选中时） -->
+    <color name="blue_500">#2196F3</color> <!-- 标准蓝色（选中时） -->
+    <color name="blue_300">#64B5F6</color> <!-- 浅蓝色（默认颜色） -->
+</resources>

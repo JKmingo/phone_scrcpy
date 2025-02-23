@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/blue_500" /> <!-- 聚焦时的颜色 -->
+    <corners android:radius="16dp" /> <!-- 圆角半径 -->
+    <!-- 黑色边框 -->
+    <stroke
+        android:color="#000000"
+    android:width="2dp" />
+    <padding
+        android:left="16dp"
+        android:top="12dp"
+        android:right="16dp"
+        android:bottom="12dp" />
+</shape>
