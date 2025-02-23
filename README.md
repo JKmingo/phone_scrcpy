@@ -1,54 +1,55 @@
+[切换到中文](./README_zh.md)
+
 # phone_scrcpy
 
-- 本应用是桌面应用 [**Scrcpy**](https://github.com/Genymobile/scrcpy) 的 Android 移植版本。
-- 该应用将目标 Android 设备的显示和触摸控制镜像到运行 scrcpy-android 的设备上。
-- phone_scrcpy 使用 **ADB-Connect** 或 **无线adb** 连接到需要镜像的 Android 设备。
+- This application is an Android port of the desktop application [**Scrcpy**](https://github.com/Genymobile/scrcpy).
+- The application mirrors the display and touch controls of a target Android device to the device running phone_scrcpy.
+- phone_scrcpy uses **ADB-Connect** or **Wireless ADB** to connect to the target Android device for mirroring.
 
-## 功能特性
+## Features
 
-- **Wi-Fi 镜像**：通过同一网络下的 ADB 连接目标设备。
-- **USB 镜像**：通过 USB 线连接目标设备，并使用 ADB 进行镜像。
+- **Wi-Fi Mirroring**: Connect to the target device over the same network using ADB.
+- **USB Mirroring**: Connect to the target device via a USB cable and use ADB for mirroring.
 
-## 使用说明
+## Usage Instructions
 
-### 1. Wi-Fi 镜像
+### 1. Wi-Fi Mirroring
 
-1. 确保两台设备在同一局域网内。
-2. 在目标设备上启用 **adb tcpip 5555**。
-3. 打开 phone_scrcpy 应用，输入需要镜像设备的 IP:5555 地址。
-4. 从下拉菜单中选择显示参数和比特率等（推荐 1280x720 分辨率和 2Mbps 比特率）。
-6. 点击 **开始** 按钮。
-7. 在目标设备上接受并信任 ADB 连接提示（勾选“始终允许此计算机连接”），某些自定义 ROM 可能不会显示此提示。
-8. 完成！您现在应该可以看到目标 Android 设备的屏幕。
+1. Ensure both devices are on the same local network.
+2. Enable **adb tcpip 5555** on the target device.
+3. Open the phone_scrcpy app and enter the IP:5555 address of the device to be mirrored.
+4. Select display parameters and bitrate from the dropdown menu (1280x720 resolution and 2Mbps bitrate are recommended).
+5. Click the **Start** button.
+6. Accept and trust the ADB connection prompt on the target device (check "Always allow from this computer"). Some custom ROMs may not display this prompt.
+7. That's it! You should now see the screen of the target Android device.
 
-### 2. USB 镜像
+### 2. USB Mirroring
 
-1. 使用 USB 线（OTG线）将目标设备连接到运行 phone_scrcpy 的设备。
-2. 确保目标设备已启用 **USB 调试**（在开发者选项中）。
-3. 打开 scrcpy 应用，选择 **USB** 作为连接类型。
-4. 从下拉菜单中选择显示参数和比特率等（推荐 1280x720 分辨率和 2Mbps 比特率）。
-5. 点击 **开始** 按钮。
-6. 在目标设备上接受并信任 ADB 连接提示（勾选“始终允许此计算机连接”）。
-7. 连接成功后，目标设备的屏幕将被镜像。
+1. Connect the target device to the phone_scrcpy device using a USB cable (OTG cable).
+2. Ensure **USB Debugging** is enabled on the target device (under Developer Options).
+3. Open the phone_scrcpy app and select **USB** as the connection type.
+4. Choose display parameters and bitrate from the dropdown menu (1280x720 resolution and 2Mbps bitrate are recommended).
+5. Tap the **Start** button.
+6. Accept and trust the ADB connection prompt on the target device (check "Always allow from this computer").
+7. Once connected, the target device's screen will be mirrored.
 
-## 操作提示
+## Tips and Controls
 
-- 在镜像远程设备时，**从屏幕底部边缘向上滑动** 以唤出本地 Android 系统的导航栏。
+- While mirroring the remote device, **swipe up from the bottom edge of the screen** to bring up the local Android system's navigation bar.
 
-## 使用 Gradle 构建项目
+## Building the Project with Gradle
 
-运行以下命令构建项目：
+Run the following command to build the project:
 
 ```bash
 ./gradlew assembleDebug
 ```
+## Support and Donations
 
-## 支持与捐款
+If this project has been helpful to you, feel free to support me:
 
-如果这个项目对您有帮助，欢迎支持我：
+### alipay
+![支付宝捐款](app/src/main/res/drawable/alipay.jpg)
 
-### 支付宝
-![支付宝捐款](app/src/main/res/drawable/res/alipay.jpg)
-
-### 微信支付
-![微信支付](app/src/main/res/drawable/res/wechat.png)
+### wechat
+![微信支付](app/src/main/res/drawable/wechat.png)
